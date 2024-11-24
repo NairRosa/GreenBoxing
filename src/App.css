@@ -1,0 +1,696 @@
+/* Reset e Estilos Globais */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.image1 {
+  width: 100px; /* Largura da imagem */
+  height: 100px; /* Altura da imagem */
+  border-radius: 50%; /* Faz a imagem ser redonda */
+  object-fit: cover; /* Garante que a imagem preencha o espaço */
+}
+
+body {
+  background: #009951;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* Previne scroll horizontal */
+  position: relative; /* Adiciona contexto de posicionamento */
+}
+
+#root {
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  width: 100%;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.externa {
+  margin: 0;
+  padding: 0;
+}
+
+/* Variáveis CSS para melhor manutenção */
+:root {
+  --primary-color: #009951;
+  --secondary-color: #28a745;
+  --text-color: #333;
+  --background-color: #fff;
+  --transition-speed: 0.3s;
+}
+
+/* Estilos do Header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2rem;
+  height: 100px;
+  width: 100%;
+  background: #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background: #fff;
+  position: relative; /* Garante que o header fique no fluxo normal do documento */
+  z-index: 1;
+}
+
+.header-scrolled {
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  background: rgba(0, 153, 81, 0.95);
+  backdrop-filter: blur(10px);
+}
+
+.content-header {
+  display: flex;
+  align-items: center;
+}
+
+.content-header h4 {
+  color: #fff;
+  margin-left: 1rem;
+}
+
+.logo img {
+  height: 105px;
+  width: auto;
+}
+
+.btn-menu .menu a {
+  text-decoration: none;
+  font-weight: 500;
+  color: #fff;
+  padding: 1rem 1.5rem;
+}
+
+.btn-menu {
+  display: flex;
+  gap: 2rem;
+  font-size: 22px;
+}
+
+/* Estilos da Área Principal */
+.display {
+  flex: 1;
+  background: #fff;
+  color: #000;
+}
+
+.container {
+  flex: 1;
+  background: #fff;
+  color: #000;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: 0;
+  padding: 1rem;
+  box-sizing: border-box; /* Importante para prevenir overflow */
+  overflow: visible; /* Remove scrolls internos */
+}
+
+.display-title {
+  margin-top: 80px; /* Ajuste baseado na altura do seu header */
+  height: auto;
+  min-height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #009951;
+  color: #fff;
+  padding: 4rem 2rem;
+  text-align: center;
+  margin-top: -1px; 
+}
+
+.display-title h1 {
+  font-size: 2.5rem;
+  padding-top: 110px;
+  padding-bottom: 50px;
+}
+
+.display-title #sub-title {
+  margin-top: 1rem;
+  font-size: 1.2rem;
+}
+
+.display-p {
+  background-color: #fff;
+}
+
+.arrow-down {
+  margin-top: 3rem;
+  width: 80px;
+  color: #000;
+}
+
+/* Ajuste para Ocupação de Largura Completa */
+.container,
+.display,
+.display-title,
+.primary-section,
+.secondary-section,
+.header,
+.img-apps-inline,
+.footer {
+  width: 100%;
+  margin: 0;
+  padding: 1rem;
+  box-sizing: border-box; /* Importante para prevenir overflow */
+  overflow: visible; /* Remove scrolls internos */
+}
+
+/* Estilos de img-apps-inline */
+.img-apps-inline {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  padding: 2rem;
+  height: auto;
+  min-height: 175px;
+  background: #fff;
+  color: #000;
+}
+
+.cards {
+  height: 90px;
+  width: 90px;
+  border-radius: 50%;
+  margin-top: 20px;
+  margin-left: 15px;
+  transition: transform var(--transition-speed) ease;
+}
+
+.cards:hover {
+  transform: scale(1.1);
+}
+
+/* Estilos das Sessões */
+.section {
+  margin: 2rem 0;
+  animation: fadeIn 0.8s ease-out forwards;
+}
+
+.section h1 {
+  color: #000;
+  font-size: 1.8rem;
+  padding-top: 1.5rem;
+}
+
+.section .content {
+  text-align: center;
+  padding: 1rem 2rem;
+}
+
+.primary-section {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: row; /* Alterado de row-reverse para row */
+  margin: 2rem 0;
+  position: relative;
+  padding: 2rem;
+}
+
+.secondary-section {
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: row-reverse; /* Mantido row-reverse */
+  margin: 2rem 0;
+  position: relative;
+  padding-right: 2rem;
+  gap: 250px;
+}
+
+/* Estilos das Sessões */
+.primary-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 4rem 8%;
+  gap: 2rem;
+}
+
+.secondary-section {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  align-items: center;
+  padding: 4rem 8%;
+  gap: 2rem;
+}
+
+.content-text {
+  flex: 1;
+  max-width: 500px;
+  margin: 0;
+}
+
+.primary-section .content-text {
+  text-align: right;
+}
+
+.secondary-section .content-text {
+  text-align: left;
+}
+
+.primary-section .content-text p,
+.secondary-section .content-text p {
+  width: 100%;
+  height: auto;
+  margin: 1.5rem 0;
+  line-height: 1.8;
+}
+
+.content-img {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.content-img img {
+  width: 100%;
+  max-width: 400px;
+  margin-right: 100px;
+  height: auto;
+  border-radius: 50%;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.content-img img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+}
+
+
+
+/* Ajustes nos títulos das seções */
+.primary-section h1,
+.secondary-section h1 {
+  width: 100%;
+  margin: 0 0 1.5rem 0;
+  padding: 0;
+}
+
+/* Ajustes nos botões */
+.primary-section .download-button,
+.secondary-section .download-button {
+  display: inline-block;
+  margin: 1.5rem 0;
+  padding: 1rem 2rem;
+  width: auto;
+  min-width: 210px;
+  background-color: #28a745;
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  border: #000 2px;
+  border-radius: 40px;
+  position: relative;
+  overflow: hidden;
+  transition: all var(--transition-speed) ease;
+}
+
+.download-button::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: -100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+  transition: var(--transition-speed);
+}
+
+.download-button:hover::after {
+  left: 100%;
+}
+
+.download-button:hover {
+  background-color: #218838;
+  text-decoration: none;
+  color: #fff;
+}
+
+/* Estilos do Footer */
+.footer {
+  background: #E6E6E6;
+  color: #000;
+  text-align: center;
+  padding: 2rem 1rem;
+  height: 300px;
+  margin-bottom: -52px;
+}
+
+.container-footer {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.content-footer h3 {
+  padding-bottom: 1.5rem;
+}
+
+.content-footer a {
+  color: #000;
+  text-decoration: none;
+  line-height: 45px;
+}
+
+.content-footer a:hover {
+  text-decoration: none;
+  color: #009951;
+}
+
+.icons p {
+  display: flex;
+  flex-direction: row;
+}
+
+.icons a {
+  padding: 6px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    height: auto;
+    padding: 1rem;
+  }
+
+  .btn-menu .menu a {
+    padding: 0.5rem 1rem;
+  }
+
+  .display-title {
+    padding: 3rem 1rem;
+  }
+
+  .cards {
+    height: 60px;
+    width: 60px;
+  }
+
+  .img-apps-inline,
+  .footer {
+    padding: 1rem; /* Reduz padding para telas menores */
+  }
+}
+
+@media (max-width: 480px) {
+  .header {
+    padding: 1rem;
+  }
+
+  .btn-menu {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .display-title h1 {
+    font-size: 2rem;
+  }
+
+  .display-title #sub-title {
+    font-size: 1rem;
+  }
+
+  .cards {
+    height: 50px;
+    width: 50px;
+  }
+
+  .img-apps-inline,
+  .footer {
+    padding: 0.5rem; /* Padding mínimo para melhor ajuste em telas pequenas */
+  }
+
+  .content-footer h3, .content-footer a {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 1024px) {
+  .primary-section,
+  .secondary-section {
+    flex-direction: column;
+    padding: 2rem 1rem;
+    gap: 2rem;
+  }
+
+  .content-text {
+    max-width: 100%;
+    text-align: center !important;
+    padding: 0 1rem;
+  }
+
+  .content-img {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .content-img img {
+    margin: 0;
+    max-width: 80%;
+    height: auto;
+  }
+
+  .img-apps-inline {
+    gap: 2rem;
+    padding: 1rem;
+    height: auto;
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    padding: 1rem;
+    height: auto;
+  }
+
+  .content-header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .btn-menu {
+    margin-top: 1rem;
+    font-size: 18px;
+    gap: 1rem;
+  }
+
+  .display-title {
+    height: auto;
+    padding: 2rem 1rem;
+  }
+
+  .display-title h1 {
+    padding-top: 50px;
+    font-size: 2rem;
+  }
+
+  .footer {
+    height: auto;
+    padding: 2rem 1rem;
+  }
+
+  .container-footer {
+    flex-direction: column;
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .header {
+    padding: 0.5rem;
+  }
+
+  .logo img {
+    height: 80px;
+  }
+
+  .display-title h1 {
+    font-size: 1.8rem;
+    padding-top: 30px;
+  }
+
+  .display-title #sub-title {
+    font-size: 1rem;
+    padding: 0 1rem;
+  }
+
+  .cards {
+    height: 70px;
+    width: 70px;
+    margin: 0.5rem;
+  }
+
+  .download-button {
+    min-width: 180px;
+    padding: 0.8rem 1.5rem;
+    font-size: 14px;
+  }
+}
+
+/* Animações de entrada */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.section {
+  animation: fadeIn 0.8s ease-out forwards;
+}
+
+/* Override styles to remove white space */
+body, #root, .externa {
+  overflow-x: hidden;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.container,
+.display,
+.display-title,
+.primary-section,
+.secondary-section,
+.header,
+.img-apps-inline,
+.footer {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  padding: 0 2rem;
+}
+
+.display-title {
+  padding: 4rem 2rem;
+  margin: 0;
+}
+
+.display {
+  display: flex;
+  flex-direction: column;
+  background: #009951;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  background: #009951;
+}
+
+/* Content section styles */
+.primary-section,
+.secondary-section {
+  background: #fff;
+  width: 100%;
+  margin: 0;
+  padding: 4rem 8%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+}
+
+.container {
+  background: #fff; /* Changed from #009951 to white */
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.display {
+  background: #fff; /* Changed from #009951 to white */
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* Keep the header and display-title green */
+.header,
+.display-title {
+  background: #009951;
+}
+
+/* Add these new animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Add these new classes */
+.animate-on-scroll {
+  opacity: 0;
+}
+
+.fade-in-up {
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.fade-in-left {
+  animation: fadeInLeft 0.8s ease-out forwards;
+}
+
+.fade-in-right {
+  animation: fadeInRight 0.8s ease-out forwards;
+}
