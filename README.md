@@ -64,7 +64,7 @@
 - Forte mensagem de sustentabilidade
 - Implementação de boas práticas de desenvolvimento React
 
-  **Melhorias previstas**
+**Melhorias previstas**
 - Implementar testes unitários
 - Adicionar gestão de estado mais robusta (Redux/Context)
 - Melhorar a acessibilidade
