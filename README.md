@@ -11,16 +11,16 @@
 - AppSection: Componente que renderiza as seções detalhadas de cada aplicativo
 - App: Componente principal que gerencia o estado e a estrutura geral da aplicação
 
-* Aplicativos Apresentados
+**Aplicativos Apresentados**
 - BistrôBox: Foco em consumo consciente de alimentos
 - BrechóBox: Plataforma de moda sustentável
 - EngBox: Soluções sustentáveis para engenharia
 - FarmaBox: Gestão de medicamentos
-- VetBox: Cuidados sustentáveis com animais
+- VetBox: Cuidados sustentáveis com animais e compostagem
   
-** Características Técnicas
-* Recursos Implementados
-1. Animações de Scroll
+# Características Técnicas
+**Recursos Implementados**
+*1. Animações de Scroll*
 - Utiliza o hook personalizado useIntersectionObserver
 - Efeitos fade-in em diferentes direções
 - Animações ativadas baseadas na visibilidade dos elementos
