@@ -1,6 +1,6 @@
 # Relatório do Projeto Green Boxing
 
-** Visão Geral
+**Visão Geral**
 
 - O Green Boxing é uma aplicação web desenvolvida em React que apresenta uma série de aplicativos voltados para sustentabilidade. O projeto possui uma interface moderna com animações de scroll e uma estrutura bem organizada.
   
