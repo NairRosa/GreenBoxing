@@ -5,7 +5,7 @@
 - O Green Boxing é uma aplicação web desenvolvida em React que apresenta uma série de aplicativos voltados para sustentabilidade. O projeto possui uma interface moderna com animações de scroll e uma estrutura bem organizada.
   
 # Estrutura do Projeto
-   -Componentes Principais
+**Componentes Principais**
 
 - AppCard: Componente responsável por exibir os cards dos aplicativos na seção inicial
 - AppSection: Componente que renderiza as seções detalhadas de cada aplicativo
