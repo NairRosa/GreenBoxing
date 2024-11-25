@@ -71,9 +71,9 @@ O projeto tem um forte foco em sustentabilidade, oferecendo diferentes soluçõe
 4. Forte mensagem de sustentabilidade
 5. Implementação de boas práticas de desenvolvimento React
 
-## Sugestões de Melhorias
+## Previsões de Melhorias
 1. Implementar testes unitários
-2. Adicionar gestão de estado mais robusta (Redux/Context)
+2. Adicionar gestão de estado mais robusta
 3. Melhorar a acessibilidade
 4. Implementar internacionalização
 5. Adicionar mais feedback visual nas interações
