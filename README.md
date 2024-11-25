@@ -1,12 +1,10 @@
 # Green Boxing | Consumo Inteligente
 
 **Visão Geral**
-
 - O Green Boxing é uma aplicação web desenvolvida em React que apresenta uma série de aplicativos voltados para sustentabilidade. O projeto possui uma interface moderna com animações de scroll e uma estrutura bem organizada.
   
 # Estrutura do Projeto
 **Componentes Principais**
-
 - AppCard: Componente responsável por exibir os cards dos aplicativos na seção inicial
 - AppSection: Componente que renderiza as seções detalhadas de cada aplicativo
 - App: Componente principal que gerencia o estado e a estrutura geral da aplicação
@@ -19,7 +17,7 @@
 - VetBox: Cuidados sustentáveis com animais e compostagem
   
 # Características Técnicas
-**Recursos Implementados** </br>
+**Recursos Implementados:** </br>
 - Animações de Scroll
 - Utiliza o hook personalizado useIntersectionObserver
 - Efeitos fade-in em diferentes direções
@@ -64,7 +62,7 @@
 - Forte mensagem de sustentabilidade
 - Implementação de boas práticas de desenvolvimento React
 
-**Melhorias previstas**
+**Melhorias previstas:**
 - Implementar testes unitários
 - Adicionar gestão de estado mais robusta (Redux/Context)
 - Melhorar a acessibilidade
