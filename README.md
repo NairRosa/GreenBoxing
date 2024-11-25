@@ -1,4 +1,4 @@
-# Relatório do Projeto Green Boxing
+# Green Boxing | Consumo Inteligente
 
 **Visão Geral**
 
@@ -19,8 +19,8 @@
 - VetBox: Cuidados sustentáveis com animais e compostagem
   
 # Características Técnicas
-**Recursos Implementados**
-*1. Animações de Scroll*
+**Recursos Implementados** </br>
+- Animações de Scroll
 - Utiliza o hook personalizado useIntersectionObserver
 - Efeitos fade-in em diferentes direções
 - Animações ativadas baseadas na visibilidade dos elementos
@@ -50,21 +50,21 @@
 - Informações de contato
 - Aspectos de Sustentabilidade
   
-  * O projeto tem um forte foco em sustentabilidade, oferecendo diferentes soluções:
+**O projeto tem um forte foco em sustentabilidade, oferecendo diferentes soluções:**
 - Consumo consciente de alimentos
 - Moda sustentável
 - Engenharia verde
 - Gestão responsável de medicamentos
 - Cuidados sustentáveis com animais, compostagem
   
-* Pontos Fortes
+**Pontos Fortes:**
 - Código bem organizado e componentizado
 - Interface moderna e responsiva
 - Foco em experiência do usuário com animações suaves
 - Forte mensagem de sustentabilidade
 - Implementação de boas práticas de desenvolvimento React
-  
-* Melhorias previstas
+
+  **Melhorias previstas**
 - Implementar testes unitários
 - Adicionar gestão de estado mais robusta (Redux/Context)
 - Melhorar a acessibilidade
