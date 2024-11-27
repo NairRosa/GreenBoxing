@@ -1,0 +1,65 @@
+.sobre-nos-container {
+    padding: 80px 20px;
+    background-color: #f5f5f5;
+  }
+  
+  .sobre-nos-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  .sobre-nos-content h1 {
+    margin-bottom: 40px;
+    color: #333;
+    font-size: 2.5em;
+  }
+  
+  .mission-vision {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 60px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .section-card {
+    flex: 1;
+    min-width: 300px;
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+  }
+  
+  .section-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .section-card h2 {
+    color: #2c3e50;
+    margin-bottom: 20px;
+    font-size: 1.8em;
+  }
+  
+  .section-card p {
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 0;
+  }
+  
+  @media (max-width: 768px) {
+    .sobre-nos-container {
+      padding: 40px 15px;
+    }
+  
+    .sobre-nos-content h1 {
+      font-size: 2em;
+    }
+  
+    .section-card {
+      min-width: 100%;
+      margin-bottom: 20px;
+    }
+  }

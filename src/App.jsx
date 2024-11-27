@@ -1,9 +1,15 @@
 import React, { useState, useEffect } from 'react';
 import '../src/App.css';
-import { SlSocialInstagram, SlSocialGithub, SlPhone, SlSupport, SlArrowDown } from "react-icons/sl";
+import { 
+  SlSocialInstagram, 
+  SlSocialGithub, 
+  SlPhone, 
+  SlSupport, 
+  SlArrowDown, 
+  SlArrowUp 
+} from "react-icons/sl";
 import { useIntersectionObserver } from './hooks/useIntersectionObserver';
 
-// Componente para o Card do App
 const AppCard = ({ title, index, onClick }) => (
   <a href={`#${title}`} onClick={onClick}>
     <img 
@@ -15,7 +21,6 @@ const AppCard = ({ title, index, onClick }) => (
   </a>
 );
 
-// Componente para a Seção do App
 const AppSection = ({ title, index, isEven, description }) => {
   const [sectionRef, isVisible] = useIntersectionObserver({
     threshold: 0.2,
@@ -50,8 +55,8 @@ const AppSection = ({ title, index, isEven, description }) => {
 
 const App = () => {
   const [isScrolled, setIsScrolled] = useState(false);
+  const [showScrollTop, setShowScrollTop] = useState(false);
 
-  // Títulos e textos das seções
   const sections = [
     {
       title: 'BistrôBox',
@@ -59,7 +64,7 @@ const App = () => {
     },
     {
       title: 'BrechóBox',
-      description: 'BrechóBox conecta você a roupas sustentáveis, incentivando a moda circular.',
+      description: 'BrechóBox conecta você à moda circular com dicas práticas para renovar e reutilizar roupas em desuso.',
     },
     {
       title: 'EngBox',
@@ -71,13 +76,14 @@ const App = () => {
     },
     {
       title: 'VetBox',
-      description: 'VetBox fornece recursos para cuidados sustentáveis com animais.',
+      description: 'VetBox oferece soluções sustentáveis para cuidados animais e reaproveitamento de compostos orgânicos na agricultura.',
     },
   ];
 
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
+      setShowScrollTop(window.scrollY > 300);
     };
 
     window.addEventListener('scroll', handleScroll);
@@ -89,12 +95,19 @@ const App = () => {
     element?.scrollIntoView({ behavior: 'smooth' });
   };
 
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  };
+
   return (
     <div className='externa'>
       <header className={`header ${isScrolled ? 'header-scrolled' : ''}`}>
         <div className="content-header">
           <div className="logo">
-            <img src="/img/1.png" alt="Logo Green Boxing" />
+            <img src="/img/1.jpg" alt="Logo Green Boxing" />
           </div>
           <h4>GREEN BOXING</h4>
         </div>
@@ -135,6 +148,7 @@ const App = () => {
               description={section.description} 
             />
           ))}
+          
         </div>
 
         <footer className="footer">
@@ -144,7 +158,7 @@ const App = () => {
                 <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
                   <SlSocialInstagram size={22} color="#333" />
                 </a>
-                <a href="https://github.com" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                <a href="https://github.com/NairRosa/GreenBoxing" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
                   <SlSocialGithub size={22} color="#333" />
                 </a>
                 <a href="tel:+123456789" aria-label="Telefone">
@@ -161,7 +175,7 @@ const App = () => {
                 <a href="#apps">Apps</a> <br />
                 <a href="#comunidade">Comunidade</a> <br />
                 <a href="#eco-pontos">Eco pontos</a> <br />
-                <a href="#sobre-nos">Sobre nós</a> <br />
+                <a href="#sobre-nos" onClick={() => scrollToSection('sobre-nos')}>Sobre nós</a> <br />
               </p>
             </div>
             <div className="content-footer">
@@ -176,6 +190,15 @@ const App = () => {
           </div>
         </footer>
       </div>
+
+      {/* Botão de voltar ao topo */}
+      <button 
+        className={`scroll-to-top ${showScrollTop ? 'show' : ''}`}
+        onClick={scrollToTop}
+        aria-label="Voltar ao topo"
+      >
+        <SlArrowUp size={20} />
+      </button>
     </div>
   );
 };

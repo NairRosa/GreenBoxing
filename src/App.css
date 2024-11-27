@@ -85,8 +85,9 @@ body {
 }
 
 .logo img {
-  height: 105px;
+  height: 58px;
   width: auto;
+  border-radius: 50%;
 }
 
 .btn-menu .menu a {
@@ -181,7 +182,7 @@ body {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 2rem;
+  gap: 5rem;
   padding: 2rem;
   height: auto;
   min-height: 175px;
@@ -368,6 +369,7 @@ body {
 }
 
 .content-footer h3 {
+  padding-top: 1rem;
   padding-bottom: 1.5rem;
 }
 
@@ -383,12 +385,44 @@ body {
 }
 
 .icons p {
+  padding-top: 1rem;
   display: flex;
   flex-direction: row;
 }
 
 .icons a {
   padding: 6px;
+}
+
+.scroll-to-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background-color: #4CAF50;
+  color: white;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+}
+
+.scroll-to-top:hover {
+  background-color: #45a049;
+  transform: translateY(-3px);
+}
+
+.scroll-to-top.show {
+  opacity: 1;
+  visibility: visible;
 }
 
 /* Responsividade */
