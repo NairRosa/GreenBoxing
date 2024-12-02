@@ -38,6 +38,15 @@ const AppSection = ({ title, index, isEven, description }) => {
     "VetBox": "/downloads/apps/VetBox.apk", // Atualize conforme necessário
   };
 
+  const downloadFile = (url) => {
+    const link = document.createElement('a');
+    link.href = url;
+    link.download = `${title}.apk`; // Nome personalizado para o arquivo
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
   return (
     <div 
       ref={sectionRef}
@@ -47,15 +56,12 @@ const AppSection = ({ title, index, isEven, description }) => {
       <div className={`content-text animate-on-scroll ${isVisible ? (isEven ? 'fade-in-left' : 'fade-in-right') : ''}`}>
         <h1>{title}</h1>
         <p>{description}</p>
-        <a 
-          href={downloadLinks[title]} 
-          download 
-          className="download-button"
-          target="_blank" 
-          rel="noopener noreferrer"
+        <button 
+          className="download-button" 
+          onClick={() => downloadFile(downloadLinks[title])}
         >
           Baixar {title} App
-        </a>
+        </button>
       </div>
       <div className={`content-img animate-on-scroll ${isVisible ? (isEven ? 'fade-in-right' : 'fade-in-left') : ''}`}>
         <img 
@@ -67,7 +73,6 @@ const AppSection = ({ title, index, isEven, description }) => {
     </div>
   );
 };
-
 const App = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [showScrollTop, setShowScrollTop] = useState(false);
