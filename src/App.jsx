@@ -28,7 +28,16 @@ const AppSection = ({ title, index, isEven, description }) => {
   });
 
   const SectionComponent = isEven ? "primary-section" : "secondary-section";
-  
+
+  // Mapeamento dos links de download
+  const downloadLinks = {
+    "BistrôBox": "https://github.com/AAndreLuis-dev/api-app/raw/refs/heads/main/src/apks/Bistro-box.apk",
+    "BrechóBox": "/downloads/apps/BrechoBox.apk", // Atualize conforme necessário
+    "EngBox": "https://github.com/AAndreLuis-dev/api-app/raw/refs/heads/main/src/apks/Eng-Box.apk",
+    "FarmaBox": "https://github.com/AAndreLuis-dev/api-app/raw/refs/heads/main/src/apks/Farma-Box.apk",
+    "VetBox": "/downloads/apps/VetBox.apk", // Atualize conforme necessário
+  };
+
   return (
     <div 
       ref={sectionRef}
@@ -38,7 +47,13 @@ const AppSection = ({ title, index, isEven, description }) => {
       <div className={`content-text animate-on-scroll ${isVisible ? (isEven ? 'fade-in-left' : 'fade-in-right') : ''}`}>
         <h1>{title}</h1>
         <p>{description}</p>
-        <a href={`/downloads/apps/${title}.apk`} download className="download-button">
+        <a 
+          href={downloadLinks[title]} 
+          download 
+          className="download-button"
+          target="_blank" 
+          rel="noopener noreferrer"
+        >
           Baixar {title} App
         </a>
       </div>
